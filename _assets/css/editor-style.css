@@ -86,7 +86,8 @@ h1, h2, h3, .banner-notice,
   text-transform: uppercase;
   font-family: "Poppins Black", "Helvetica Black", "Open Sans", Arial Black, sans-serif;
   font-weight: normal;
-  letter-spacing: 3px; }
+  letter-spacing: 3px;
+  text-align: center; }
 
 h1 {
   font-size: 33.184px;

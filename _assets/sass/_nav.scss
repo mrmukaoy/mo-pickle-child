@@ -3,7 +3,7 @@
 /* Main Nav */
 .primary-menu .menu-item {
 	@extend h3;
-	font-size: 1rem;
+	@include font-size($size-sm);
 }
 
 .primary-menu-wrapper + .header-toggles {

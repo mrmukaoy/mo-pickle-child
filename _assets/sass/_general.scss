@@ -50,6 +50,7 @@ h1, h2, h3,
 	font-family: $heading;
 	font-weight: normal;
 	letter-spacing: 3px;
+	text-align: center;
 }
 h1 { @include font-size($size-4); }
 h2 { @include font-size($size-3); }

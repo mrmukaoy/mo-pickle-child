@@ -88,7 +88,8 @@ h1, h2, h3, .banner-notice, .primary-menu .menu-item,
   text-transform: uppercase;
   font-family: "Poppins Black", "Helvetica Black", "Open Sans", Arial Black, sans-serif;
   font-weight: normal;
-  letter-spacing: 3px; }
+  letter-spacing: 3px;
+  text-align: center; }
 
 h1 {
   font-size: 33.184px;
@@ -137,10 +138,17 @@ p, li, dd, dt {
   text-align: center; }
 
 /* Styles for elements in the header */
+.header-footer-group .section-inner {
+  width: 100%; }
+
+.header-footer-group .header-inner {
+  padding: 0; }
+
 /* Styles for elements in navigation */
 /* Main Nav */
 .primary-menu .menu-item {
-  font-size: 1rem; }
+  font-size: 13.328px;
+  font-size: 0.833rem; }
 
 .primary-menu-wrapper + .header-toggles {
   display: none; }

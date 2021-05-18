@@ -1,0 +1,13 @@
+/* Styles for elements in navigation */
+
+/* Main Nav */
+.primary-menu .menu-item {
+	@extend h3;
+	font-size: 1rem;
+}
+
+.primary-menu-wrapper + .header-toggles {
+	// the search button in TwentyTwenty
+	// donm't need it for a one-page site
+	display: none;
+}

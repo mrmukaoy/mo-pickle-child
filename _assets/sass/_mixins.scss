@@ -1,0 +1,32 @@
+/* Mixins */
+
+/**
+ * Set font size
+ * Usage: @include font-size(1.2);
+ */
+@mixin font-size( $decimal-size, $keyword: null ) {
+  @if $keyword{ font-size: $keyword; }
+  @else { font-size: $decimal-size * $base-font-multiplier * 16px;}
+  font-size: $decimal-size * 1rem;
+}
+
+/**
+ * Clearfix
+ */
+@mixin clearfix() {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+// Tint: Add percentage of white to a color
+@function tint($color, $percent) {
+	@return mix(white, $color, $percent);
+}
+
+// Shade: Add percentage of black to a color
+@function shade($color, $percent) {
+	@return mix(black, $color, $percent);
+}

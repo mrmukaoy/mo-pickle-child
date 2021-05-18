@@ -1,0 +1,57 @@
+/**
+ * Type scale is using minor third modular
+ * http://www.modularscale.com/?1&em&1.2&web&text
+ */
+$rem-base: 1rem;
+$rem-pixel: 0.01em; // single pixel
+$rem-scale: 1.2;
+$base-font-multiplier: 1;
+
+$size-6: 2.986;
+$size-5: 2.488;
+$size-4: 2.074;
+$size-3: 1.728;
+$size-2: 1.44;
+$size-1: 1.2;
+$size-0: 1;
+$size-sm: 0.833;
+$size-xs: 0.694;
+
+/**
+ * Line height
+ */
+$line-height: 1.44;
+$line-height-md: 1.333;
+$line-height-sm: 1.2;
+
+/**
+ * Colors
+ */
+$lime:   #d0f102;
+$green:  #007a4b;
+$blue:   #143079;
+$orange: #ff730a;
+$black:  #010101;
+
+$color-text: $black;
+$blue-dark:  darken(desaturate(adjust-hue($blue, -10), 9.41), 10.00); // #112a49
+$blue-light: lighten(saturate(adjust-hue($blue, -16), 28.37), 18.63); // #0181ec
+
+/**
+ * Fonts
+ */
+$heading:      'Poppins Black', 'Helvetica Black', 'Open Sans', Arial Black, sans-serif;
+$body-font:    'Poppins Light', 'Helvetica Neue', 'Open Sans', Arial, sans-serif;
+$body-regular: 'Poppins', 'Helvetica Neue', 'Open Sans', Arial, sans-serif;
+$display:      '';
+
+/**
+ * Breakpoints
+ */
+$break-xs:     30em;   //  480px, small columns
+$break-zoom:   37em;   //  592px, when we increase font size
+$break-sm:     41em;   //  656px, max-text length
+$break-sm-max: 50em;   //  800px, max-content size
+$break-md:     61.5em; //  984px, break into columns
+$break-lg:     71em;   // 1136px, widen columns
+$break-xl:     95em;   // 1520px, crazy wide

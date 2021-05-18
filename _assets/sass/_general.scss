@@ -1,0 +1,64 @@
+/* Styles for elements in a broad sense, not in a specific location on the page */
+
+@font-face {
+	font-family: 'College';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/wp-content/themes/mo-pickle-child/_assets/fonts/Collegeb.ttf') format('truetype');;
+}
+@font-face {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/wp-content/themes/mo-pickle-child/_assets/fonts/Poppins-Regular.ttf') format('truetype');;
+}
+@font-face {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 700;
+	src: url('/wp-content/themes/mo-pickle-child/_assets/fonts/Poppins-Bold.ttf') format('truetype');;
+}
+@font-face {
+	font-family: 'Poppins Black';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/wp-content/themes/mo-pickle-child/_assets/fonts/Poppins-Black.ttf') format('truetype');;
+}
+@font-face {
+	font-family: 'Poppins Light';
+	font-style: normal;
+	font-weight: 200;
+	src: url('/wp-content/themes/mo-pickle-child/_assets/fonts/Poppins-ExtraLight.ttf') format('truetype');;
+}
+
+
+html {
+	font-size: 100% !important; /* restore 1rem = 16px */
+}
+body {
+	background-color: #ffffff;
+	font-family: $body-font;
+	font-size: 1.25rem;
+	line-height: 1.35;
+}
+
+h1, h2, h3,
+.entry-content h1,
+.entry-content h2,
+.entry-content h3 {
+	text-transform: uppercase;
+	font-family: $heading;
+	font-weight: normal;
+	letter-spacing: 3px;
+}
+h1 { @include font-size($size-4); }
+h2 { @include font-size($size-3); }
+h3 { @include font-size($size-2); }
+h4 { @include font-size($size-1); }
+h5 { @include font-size($size-0); }
+h6 { @include font-size($size-0); }
+
+p, li, dd, dt {
+	@include font-size($size-0);
+	line-height: 1.35;
+}

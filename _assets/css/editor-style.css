@@ -1,0 +1,139 @@
+/*!
+ Theme Name: MO Pickleball Twenty Twenty child
+ * Description: A child theme of Twenty Twenty, for Missouri Pickleball club
+ * Theme
+Author: Afflecto Media Marketing
+ * Author URI: http://afflectomm.com
+ * Version: 1.0.0
+ * Template: twentytwenty
+ */
+/**
+ * Variables and mixins
+ */
+/**
+ * Type scale is using minor third modular
+ * http://www.modularscale.com/?1&em&1.2&web&text
+ */
+/**
+ * Line height
+ */
+/**
+ * Colors
+ */
+/**
+ * Fonts
+ */
+/**
+ * Breakpoints
+ */
+/* Mixins */
+/**
+ * Set font size
+ * Usage: @include font-size(1.2);
+ */
+/**
+ * Clearfix
+ */
+/**
+ * Component styles
+ */
+/* Styles for elements in a broad sense, not in a specific location on the page */
+@font-face {
+  font-family: 'College';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/wp-content/themes/mo-pickle-child/_assets/fonts/Collegeb.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/wp-content/themes/mo-pickle-child/_assets/fonts/Poppins-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url("/wp-content/themes/mo-pickle-child/_assets/fonts/Poppins-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Poppins Black';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/wp-content/themes/mo-pickle-child/_assets/fonts/Poppins-Black.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Poppins Light';
+  font-style: normal;
+  font-weight: 200;
+  src: url("/wp-content/themes/mo-pickle-child/_assets/fonts/Poppins-ExtraLight.ttf") format("truetype"); }
+
+html {
+  font-size: 100% !important;
+  /* restore 1rem = 16px */ }
+
+body {
+  background-color: #ffffff;
+  font-family: "Poppins Light", "Helvetica Neue", "Open Sans", Arial, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.35; }
+
+h1, h2, h3, .banner-notice,
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content .banner-notice {
+  text-transform: uppercase;
+  font-family: "Poppins Black", "Helvetica Black", "Open Sans", Arial Black, sans-serif;
+  font-weight: normal;
+  letter-spacing: 3px; }
+
+h1 {
+  font-size: 33.184px;
+  font-size: 2.074rem; }
+
+h2 {
+  font-size: 27.648px;
+  font-size: 1.728rem; }
+
+h3, .banner-notice {
+  font-size: 23.04px;
+  font-size: 1.44rem; }
+
+h4 {
+  font-size: 19.2px;
+  font-size: 1.2rem; }
+
+h5 {
+  font-size: 16px;
+  font-size: 1rem; }
+
+h6 {
+  font-size: 16px;
+  font-size: 1rem; }
+
+p, li, dd, dt {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.35; }
+
+/* Styles for elements between the header & the footer */
+.entry-content {
+  font-family: "Poppins Light", "Helvetica Neue", "Open Sans", Arial, sans-serif; }
+  .entry-content p, .entry-content li, .entry-content dt, .entry-content dd {
+    line-height: 1.35; }
+  .entry-content strong, .entry-content b {
+    font-family: "Poppins", "Helvetica Neue", "Open Sans", Arial, sans-serif;
+    font-weight: bold; }
+
+.banner-notice {
+  margin: 0;
+  width: 100% !important;
+  max-width: 100% !important;
+  background-color: #ff730a;
+  color: #ffffff;
+  text-align: center; }
+
+/* Styles for elements in the page editor */
+.editor-styles-wrapper {
+  background-color: #ffffff; }

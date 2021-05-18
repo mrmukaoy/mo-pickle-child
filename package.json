@@ -1,0 +1,23 @@
+{
+  "name": "mo-pickle-child",
+  "version": "1.0.0",
+  "description": "child WordPress theme for MO Pickleball",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w _assets/sass/ -o _assets/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrmukaoy/mo-pickle-child.git"
+  },
+  "author": "Martin Yoakum, Afflecto Media Marketing",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/mrmukaoy/mo-pickle-child/issues"
+  },
+  "homepage": "https://github.com/mrmukaoy/mo-pickle-child#readme",
+  "dependencies": {
+    "node-sass": "^6.0.0"
+  }
+}

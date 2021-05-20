@@ -1,13 +1,26 @@
 /* Styles for elements in navigation */
 
 /* Main Nav */
-.primary-menu .menu-item {
-	@extend h3;
-	@include font-size($size-sm);
+.primary-menu {
+
+	.menu-item {
+		@extend h3;
+		@include font-size($size-sm);
+
+		&.cta {
+			background-color: $lime;
+		}
+	}
 }
 
+.primary-menu-wrapper {
+	@media screen and (min-width:1000px) {
+		// vertically fill entire flex area
+		display: flex;
+	}
+}
 .primary-menu-wrapper + .header-toggles {
 	// the search button in TwentyTwenty
-	// donm't need it for a one-page site
+	// don't need it for a one-page site
 	display: none;
 }

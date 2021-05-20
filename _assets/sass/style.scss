@@ -8,7 +8,9 @@ Author: Afflecto Media Marketing
  * Template: twentytwenty
  */
 
-// @import url("../twentytwenty/style.css");
+// to compile these files into css, first install node-sass
+// customize 'scripts' in package.json
+// 'npm run sass' or 'npm run sass -w'
 
 /**
  * Variables and mixins

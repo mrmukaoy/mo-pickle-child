@@ -78,6 +78,16 @@ body {
   font-size: 1.25rem;
   line-height: 1.35; }
 
+body:not(.overlay-header) .primary-menu > li > a,
+body:not(.overlay-header) .primary-menu > li > .icon,
+.modal-menu a, .footer-menu a, .footer-widgets a,
+#site-footer .wp-block-button.is-style-outline,
+.wp-block-pullquote::before, .singular:not(.overlay-header) .entry-header a,
+.archive-header a,
+.header-footer-group .color-accent,
+.header-footer-group .color-accent-hover:hover {
+  color: #007a4b; }
+
 h1, h2, h3, .banner-notice,
 .entry-content h1,
 .entry-content h2,

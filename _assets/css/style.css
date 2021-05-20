@@ -78,6 +78,16 @@ body {
   font-size: 1.25rem;
   line-height: 1.35; }
 
+body:not(.overlay-header) .primary-menu > li > a,
+body:not(.overlay-header) .primary-menu > li > .icon,
+.modal-menu a, .footer-menu a, .footer-widgets a,
+#site-footer .wp-block-button.is-style-outline,
+.wp-block-pullquote::before, .singular:not(.overlay-header) .entry-header a,
+.archive-header a,
+.header-footer-group .color-accent,
+.header-footer-group .color-accent-hover:hover {
+  color: #007a4b; }
+
 h1, h2, h3, .banner-notice, .primary-menu .menu-item,
 .entry-content h1,
 .entry-content h2,
@@ -143,12 +153,31 @@ p, li, dd, dt {
 
 .header-footer-group .header-inner {
   padding: 0; }
+  @media screen and (min-width: 1000px) {
+    .header-footer-group .header-inner {
+      align-items: stretch; } }
+  @media screen and (min-width: 1000px) {
+    .header-footer-group .header-inner .header-navigation-wrapper {
+      align-items: stretch; } }
+
+@media screen and (min-width: 1000px) {
+  .site-logo {
+    padding: 1.5rem 0 1.5rem 1.5rem; } }
+
+.site-logo img {
+  max-height: 1.5rem; }
 
 /* Styles for elements in navigation */
 /* Main Nav */
 .primary-menu .menu-item {
   font-size: 13.328px;
   font-size: 0.833rem; }
+  .primary-menu .menu-item.cta {
+    background-color: #d0f102; }
+
+@media screen and (min-width: 1000px) {
+  .primary-menu-wrapper {
+    display: flex; } }
 
 .primary-menu-wrapper + .header-toggles {
   display: none; }

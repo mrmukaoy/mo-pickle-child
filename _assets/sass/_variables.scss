@@ -1,5 +1,5 @@
 /**
- * Type scale is using minor third modular
+ * Type scale is using perfect fourth
  * http://www.modularscale.com/?1&em&1.2&web&text
  */
 $rem-base:             1rem;
@@ -7,15 +7,14 @@ $rem-pixel:            0.01em; // single pixel
 $rem-scale:            1.2;
 $base-font-multiplier: 1;
 
-$size-6:  2.986;
-$size-5:  2.488;
-$size-4:  2.074;
-$size-3:  1.728;
-$size-2:  1.44;
-$size-1:  1.2;
+$size-5:  4.209;
+$size-4:  3.157;
+$size-3:  2.369;
+$size-2:  1.777;
+$size-1:  1.33;
 $size-0:  1;
-$size-sm: 0.833;
-$size-xs: 0.694;
+$size-sm: 0.75;
+$size-xs: 0.563;
 
 /**
  * Line height
@@ -37,6 +36,7 @@ $gray-light:  #f4f6f5;
 $color-text: $black;
 $blue-dark:  darken(desaturate(adjust-hue($blue, -10), 9.41), 10.00); // #112a49
 $blue-light: lighten(saturate(adjust-hue($blue, -16), 28.37), 18.63); // #0181ec
+
 
 /**
  * Fonts

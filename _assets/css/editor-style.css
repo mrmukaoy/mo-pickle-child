@@ -11,7 +11,7 @@ Author: Afflecto Media Marketing
  * Variables and mixins
  */
 /**
- * Type scale is using minor third modular
+ * Type scale is using perfect fourth
  * http://www.modularscale.com/?1&em&1.2&web&text
  */
 /**
@@ -68,9 +68,45 @@ Author: Afflecto Media Marketing
   font-weight: 200;
   src: url("/wp-content/themes/mo-pickle-child/_assets/fonts/Poppins-ExtraLight.ttf") format("truetype"); }
 
+.has-mopickle-blue-color {
+  color: #143079; }
+
+.has-mopickle-lightblue-color {
+  color: #0080ec; }
+
+.has-mopickle-darkblue-color {
+  color: #112a49; }
+
+.has-mopickle-green-color {
+  color: #007a4b; }
+
+.has-mopickle-lime-color {
+  color: #d0f102; }
+
+.has-mopickle-orange-color {
+  color: #ff730a; }
+
+.has-mopickle-blue-background-color {
+  background-color: #143079; }
+
+.has-mopickle-lightblue-background-color {
+  background-color: #0080ec; }
+
+.has-mopickle-darkblue-background-color {
+  background-color: #112a49; }
+
+.has-mopickle-green-background-color {
+  background-color: #007a4b; }
+
+.has-mopickle-lime-background-color {
+  background-color: #d0f102; }
+
+.has-mopickle-orange-background-color {
+  background-color: #ff730a; }
+
 html {
-  font-size: 100% !important;
-  /* restore 1rem = 16px */ }
+  font-size: 112.5% !important;
+  /* 1rem = 18px when base = 16px */ }
 
 body {
   background-color: #ffffff;
@@ -88,6 +124,19 @@ body:not(.overlay-header) .primary-menu > li > .icon,
 .header-footer-group .color-accent-hover:hover {
   color: #007a4b; }
 
+.entry-content > * {
+  margin-bottom: 1.25rem; }
+
+.entry-content hr {
+  height: 0.2222rem;
+  width: 10rem !important;
+  margin: 2rem auto !important;
+  background: linear-gradient(currentColor 0%, currentColor 100%); }
+  .entry-content hr:before {
+    content: none; }
+  .entry-content hr:after {
+    content: none; }
+
 h1, h2, h3, .banner-notice,
 .entry-content h1,
 .entry-content h2,
@@ -100,20 +149,21 @@ h1, h2, h3, .banner-notice,
   text-align: center; }
 
 h1 {
-  font-size: 33.184px;
-  font-size: 2.074rem; }
+  font-size: 50.512px;
+  font-size: 3.157rem; }
 
 h2 {
-  font-size: 27.648px;
-  font-size: 1.728rem; }
+  font-size: 37.904px;
+  font-size: 2.369rem;
+  margin: 4rem 0 2rem; }
 
 h3, .banner-notice {
-  font-size: 23.04px;
-  font-size: 1.44rem; }
+  font-size: 28.432px;
+  font-size: 1.777rem; }
 
 h4 {
-  font-size: 19.2px;
-  font-size: 1.2rem; }
+  font-size: 21.28px;
+  font-size: 1.33rem; }
 
 h5 {
   font-size: 16px;
@@ -143,7 +193,29 @@ p, li, dd, dt {
   max-width: 100% !important;
   background-color: #ff730a;
   color: #ffffff;
-  text-align: center; }
+  text-align: center;
+  padding: 0.8rem 2rem; }
+
+.singular .entry-header {
+  padding: 5rem 2.5rem;
+  background: #007a4b url("../img/header_bg.jpg");
+  background-size: cover;
+  color: #fff; }
+
+.singular.home .entry-header .section-inner {
+  background: transparent url("../img/MPC_header.png") center no-repeat;
+  background-size: contain;
+  width: auto;
+  max-width: 800px; }
+
+.singular.home .entry-title {
+  position: relative;
+  font-size: 160px;
+  font-size: 10rem;
+  left: -1000rem; }
+
+.singular .post-inner {
+  padding-top: 0; }
 
 /* Styles for elements in the page editor */
 .editor-styles-wrapper {

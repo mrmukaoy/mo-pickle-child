@@ -21,4 +21,33 @@
 	background-color: $orange;
 	color: #ffffff;
 	text-align: center;
+	padding: 0.8rem 2rem;
+}
+
+.singular {
+	.entry-header {
+		padding: 5rem 2.5rem;
+		background: $green url('../img/header_bg.jpg');
+		background-size: cover;
+		color: #fff;
+	}
+
+	&.home {
+		.entry-header .section-inner {
+			background: transparent url('../img/MPC_header.png') center no-repeat;
+			background-size: contain;
+			width: auto;
+			max-width: 800px;
+		}
+
+		.entry-title {
+			position: relative;
+			@include font-size(10);
+			left: -1000rem;
+		}
+	}
+
+	.post-inner {
+		padding-top: 0;
+	}
 }

@@ -31,9 +31,23 @@
 	src: url('/wp-content/themes/mo-pickle-child/_assets/fonts/Poppins-ExtraLight.ttf') format('truetype');;
 }
 
+.has-mopickle-blue-color{color: $blue;}
+.has-mopickle-lightblue-color{color: $blue-light;}
+.has-mopickle-darkblue-color{color: $blue-dark;}
+.has-mopickle-green-color{color: $green;}
+.has-mopickle-lime-color{color: $lime;}
+.has-mopickle-orange-color{color: $orange;}
+
+.has-mopickle-blue-background-color{background-color: $blue;}
+.has-mopickle-lightblue-background-color{background-color: $blue-light;}
+.has-mopickle-darkblue-background-color{background-color: $blue-dark;}
+.has-mopickle-green-background-color{background-color: $green;}
+.has-mopickle-lime-background-color{background-color: $lime;}
+.has-mopickle-orange-background-color{background-color: $orange;}
+
 
 html {
-	font-size: 100% !important; /* restore 1rem = 16px */
+	font-size: 112.5% !important; /* 1rem = 18px when base = 16px */
 }
 body {
 	background-color: #ffffff;
@@ -53,6 +67,27 @@ body:not(.overlay-header) .primary-menu > li > .icon,
 	color: $green;
 }
 
+.entry-content  {
+
+	> * {
+		margin-bottom: 1.25rem;
+	}
+
+	hr {
+		height: 0.2222rem; // 4px
+		width: 10rem !important;
+		margin: 2rem auto !important;
+		background: linear-gradient( currentColor 0%, currentColor 100%);
+
+		&:before {
+			content: none;
+		}
+		&:after {
+			content: none;
+		}
+	}
+}
+
 h1, h2, h3,
 .entry-content h1,
 .entry-content h2,
@@ -64,7 +99,10 @@ h1, h2, h3,
 	text-align: center;
 }
 h1 { @include font-size($size-4); }
-h2 { @include font-size($size-3); }
+h2 {
+	@include font-size($size-3);
+	margin: 4rem 0 2rem;
+}
 h3 { @include font-size($size-2); }
 h4 { @include font-size($size-1); }
 h5 { @include font-size($size-0); }

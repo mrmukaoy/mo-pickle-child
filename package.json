@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "child WordPress theme for MO Pickleball",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "node-sass -w _assets/sass/ -o _assets/css"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mrmukaoy/mo-pickle-child.git"
@@ -17,7 +13,19 @@
     "url": "https://github.com/mrmukaoy/mo-pickle-child/issues"
   },
   "homepage": "https://github.com/mrmukaoy/mo-pickle-child#readme",
-  "dependencies": {
-    "node-sass": "^6.0.0"
+  "devDependencies": {
+    "@wordpress/scripts": "^12.1.0",
+    "dir-archiver": "^1.1.1",
+    "node-sass": "^6.0.0",
+    "rtlcss": "^2.5.0"
+  },
+  "scripts": {
+    "sass": "node-sass -w _assets/sass/ -o _assets/css",
+    "watch": "node-sass _assets/sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
+    "compile:css": "node-sass _assets/sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
+    "compile:rtl": "rtlcss style.css style-rtl.css",
+    "lint:scss": "wp-scripts lint-style '_assets/sass/**/*.scss'",
+    "lint:js": "wp-scripts lint-js '_assets/js/*.js'",
+    "bundle": "dir-archiver --src . --dest ../mo-pickle-child.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor .travis.yml phpcs.xml.dist sass style.css.map"
   }
 }

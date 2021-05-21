@@ -230,9 +230,13 @@ p, li, dd, dt {
   background-color: #007a4b; }
 
 .blue-dark p,
+.blue-dark li,
 .blue p,
+.blue li,
 .green p,
-.lime p {
+.green li,
+.lime p,
+.lime li {
   font-family: "Poppins", "Helvetica Neue", "Open Sans", Arial, sans-serif; }
 
 .singular .entry-header {

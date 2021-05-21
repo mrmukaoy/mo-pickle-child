@@ -4,31 +4,37 @@
 	font-family: 'College';
 	font-style: normal;
 	font-weight: 400;
-	src: url('/wp-content/themes/mo-pickle-child/_assets/fonts/Collegeb.ttf') format('truetype');;
+	src: url('/wp-content/themes/mo-pickle-child/_assets/fonts/Collegeb.ttf') format('truetype');
 }
 @font-face {
 	font-family: 'Poppins';
 	font-style: normal;
 	font-weight: 400;
-	src: url('/wp-content/themes/mo-pickle-child/_assets/fonts/Poppins-Regular.ttf') format('truetype');;
+	src: url('/wp-content/themes/mo-pickle-child/_assets/fonts/Poppins-Regular.ttf') format('truetype');
 }
 @font-face {
 	font-family: 'Poppins';
 	font-style: normal;
 	font-weight: 700;
-	src: url('/wp-content/themes/mo-pickle-child/_assets/fonts/Poppins-Bold.ttf') format('truetype');;
+	src: url('/wp-content/themes/mo-pickle-child/_assets/fonts/Poppins-Bold.ttf') format('truetype');
 }
 @font-face {
 	font-family: 'Poppins Black';
 	font-style: normal;
 	font-weight: 400;
-	src: url('/wp-content/themes/mo-pickle-child/_assets/fonts/Poppins-Black.ttf') format('truetype');;
+	src: url('/wp-content/themes/mo-pickle-child/_assets/fonts/Poppins-Black.ttf') format('truetype');
 }
 @font-face {
 	font-family: 'Poppins Light';
 	font-style: normal;
 	font-weight: 200;
-	src: url('/wp-content/themes/mo-pickle-child/_assets/fonts/Poppins-ExtraLight.ttf') format('truetype');;
+	src: url('/wp-content/themes/mo-pickle-child/_assets/fonts/Poppins-ExtraLight.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Display';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/wp-content/themes/mo-pickle-child/_assets/fonts/Collegeb.ttf') format('truetype');
 }
 
 .has-mopickle-blue-color{color: $blue;}
@@ -88,14 +94,15 @@ body:not(.overlay-header) .primary-menu > li > .icon,
 	}
 }
 
-h1, h2, h3,
+h1, h2, h3, h6,
 .entry-content h1,
 .entry-content h2,
-.entry-content h3 {
+.entry-content h3,
+.entry-content h6 {
 	text-transform: uppercase;
 	font-family: $heading;
 	font-weight: normal;
-	letter-spacing: 3px;
+	letter-spacing: 5px;
 	text-align: center;
 }
 h1 { @include font-size($size-4); }
@@ -106,9 +113,17 @@ h2 {
 h3 { @include font-size($size-2); }
 h4 { @include font-size($size-1); }
 h5 { @include font-size($size-0); }
-h6 { @include font-size($size-0); }
+h6 {
+	@include font-size($size-0);
+}
 
 p, li, dd, dt {
 	@include font-size($size-0);
 	line-height: 1.35;
+}
+
+.display {
+	font-family: $display;
+	font-weight: normal;
+	margin: 0 0 0.75rem;
 }

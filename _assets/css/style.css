@@ -68,6 +68,12 @@ Author: Afflecto Media Marketing
   font-weight: 200;
   src: url("/wp-content/themes/mo-pickle-child/_assets/fonts/Poppins-ExtraLight.ttf") format("truetype"); }
 
+@font-face {
+  font-family: 'Display';
+  font-style: normal;
+  font-weight: 400;
+  src: url("/wp-content/themes/mo-pickle-child/_assets/fonts/Collegeb.ttf") format("truetype"); }
+
 .has-mopickle-blue-color {
   color: #143079; }
 
@@ -137,17 +143,18 @@ body:not(.overlay-header) .primary-menu > li > .icon,
   .entry-content hr:after {
     content: none; }
 
-h1, h2, h3, .banner-notice, .primary-menu .menu-item,
+h1, h2, h3, .banner-notice, .primary-menu .menu-item, h6,
 .entry-content h1,
 .entry-content h2,
 .entry-content h3,
 .entry-content .banner-notice,
 .entry-content .primary-menu .menu-item,
-.primary-menu .entry-content .menu-item {
+.primary-menu .entry-content .menu-item,
+.entry-content h6 {
   text-transform: uppercase;
   font-family: "Poppins Black", "Helvetica Black", "Open Sans", Arial Black, sans-serif;
   font-weight: normal;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
   text-align: center; }
 
 h1 {
@@ -180,6 +187,11 @@ p, li, dd, dt {
   font-size: 1rem;
   line-height: 1.35; }
 
+.display {
+  font-family: Display, "American Typewriter", "Times New Roman", Courier, serif;
+  font-weight: normal;
+  margin: 0 0 0.75rem; }
+
 /* Styles for elements between the header & the footer */
 .entry-content {
   font-family: "Poppins Light", "Helvetica Neue", "Open Sans", Arial, sans-serif; }
@@ -197,6 +209,31 @@ p, li, dd, dt {
   color: #ffffff;
   text-align: center;
   padding: 0.8rem 2rem; }
+
+.wp-block-group.alignfull.banner {
+  width: 100%; }
+  .wp-block-group.alignfull.banner .wp-block-group__inner-container {
+    width: calc(100% - 4rem);
+    max-width: 58rem; }
+
+/* background color, and  tweaks */
+.blue-dark {
+  background: #112a49 url("../img/blue-dark-pattern-repeat.jpg") repeat top left; }
+
+.lime {
+  background: #d0f102 url("../img/lime-lines-repeat.jpg") repeat top left; }
+
+.callout.blue {
+  background-color: #143079; }
+
+.callout.green {
+  background-color: #007a4b; }
+
+.blue-dark p,
+.blue p,
+.green p,
+.lime p {
+  font-family: "Poppins", "Helvetica Neue", "Open Sans", Arial, sans-serif; }
 
 .singular .entry-header {
   padding: 5rem 2.5rem;

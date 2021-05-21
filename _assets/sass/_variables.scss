@@ -44,7 +44,7 @@ $blue-light: lighten(saturate(adjust-hue($blue, -16), 28.37), 18.63); // #0181ec
 $heading:      'Poppins Black', 'Helvetica Black', 'Open Sans', Arial Black, sans-serif;
 $body-font:    'Poppins Light', 'Helvetica Neue', 'Open Sans', Arial, sans-serif;
 $body-regular: 'Poppins', 'Helvetica Neue', 'Open Sans', Arial, sans-serif;
-$display:      '';
+$display:      Display, 'American Typewriter', 'Times New Roman', Courier, serif;
 
 /**
  * Breakpoints

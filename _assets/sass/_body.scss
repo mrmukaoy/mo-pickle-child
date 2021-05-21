@@ -23,6 +23,38 @@
 	text-align: center;
 	padding: 0.8rem 2rem;
 }
+.wp-block-group.alignfull.banner {
+	width: 100%;
+
+	.wp-block-group__inner-container {
+		width: calc(100% - 4rem);
+		max-width: 58rem;
+	}
+}
+/* background color, and  tweaks */
+.blue-dark {
+	background: $blue-dark url('../img/blue-dark-pattern-repeat.jpg') repeat top left;
+}
+.lime {
+	background: $lime url('../img/lime-lines-repeat.jpg') repeat top left;
+}
+.callout {
+	&.blue {
+		background-color: $blue;
+	}
+
+	&.green {
+		background-color: $green;
+	}
+}
+.blue-dark p,
+.blue p,
+.green p,
+.lime p {
+	font-family: $body-regular;
+}
+
+
 
 .singular {
 	.entry-header {

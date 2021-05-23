@@ -16,12 +16,13 @@
 
 				<div class="section-inner">
 
+<?php /*
 					<div class="footer-credits">
 
 						<p class="footer-copyright">&copy;
 							<?php
 							echo date_i18n(
-								/* translators: Copyright date format, see https://www.php.net/manual/datetime.format.php */
+								// translators: Copyright date format, see https://www.php.net/manual/datetime.format.php
 								_x( 'Y', 'copyright date format', 'twentytwenty' )
 							);
 							?>
@@ -35,21 +36,38 @@
 						</p><!-- .powered-by-wordpress -->
 
 					</div><!-- .footer-credits -->
-
+*/ ?>
+<?php /*
 					<a class="to-the-top" href="#site-header">
 						<span class="to-the-top-long">
 							<?php
-							/* translators: %s: HTML character for up arrow. */
+							// translators: %s: HTML character for up arrow.
 							printf( __( 'To the top %s', 'twentytwenty' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
 							?>
 						</span><!-- .to-the-top-long -->
 						<span class="to-the-top-short">
 							<?php
-							/* translators: %s: HTML character for up arrow. */
+							//translators: %s: HTML character for up arrow.
 							printf( __( 'Up %s', 'twentytwenty' ), '<span class="arrow" aria-hidden="true">&uarr;</span>' );
 							?>
 						</span><!-- .to-the-top-short -->
 					</a><!-- .to-the-top -->
+*/ ?>
+
+
+				<?php if ( is_active_sidebar( 'sidebar-subfoot' ) ) { ?>
+
+					<aside class="subfooter-widgets-outer-wrapper" role="complementary">
+						<div class="subfooter-widgets-wrapper">
+
+							<div class="footer-widgets">
+								<?php dynamic_sidebar( 'sidebar-subfoot' ); ?>
+							</div>
+
+						</div><!-- .subfooter-widgets-wrapper -->
+					</aside><!-- .subfooter-widgets-outer-wrapper -->
+
+				<?php } ?>
 
 				</div><!-- .section-inner -->
 

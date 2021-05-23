@@ -11,9 +11,19 @@
 		font-family: $body-regular;
 		font-weight: bold;
 	}
+
+	.wp-block-columns {
+		h1 {}
+		h2 {}
+		h3 { margin-top: 2rem; margin-bottom: 1rem; }
+		h4 {}
+		h5 {}
+		h6 { margin-top: 2rem; margin-bottom: 0; }
+	}
 }
 
-.banner-notice {
+.banner-notice,
+.banner-notice.has-background {
 	@extend h3;
 	margin: 0;
 	width: 100% !important;
@@ -86,4 +96,34 @@
 	.post-inner {
 		padding-top: 0;
 	}
+}
+
+.wp-block-group {
+
+	@media screen and (min-width:700px) {
+		&.has-background {
+			padding: 2rem;
+		}
+	}
+
+	.wp-block-columns:not(.alignwide):not(.alignfull) {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+
+
+.wp-block-image:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.aligncenter),
+figure.aligncenter {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.gb-button {
+	background-color: $lime;
+	color: $green;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-family: $heading;
+
 }

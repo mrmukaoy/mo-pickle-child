@@ -58,6 +58,44 @@ function mopickle_child_enqueue_style() {
 add_action( 'wp_enqueue_scripts', 'mopickle_child_enqueue_style', 11);
 
 
+/* Extra widgets */
+function mopickle_sidebar_registration() {
+
+	// Arguments used in all register_sidebar() calls.
+	$shared_args = array(
+		'before_title'  => '<h2 class="widget-title subheading heading-size-3">',
+		'after_title'   => '</h2>',
+		'before_widget' => '<div class="widget %2$s"><div class="widget-content">',
+		'after_widget'  => '</div></div>',
+	);
+
+	// Footer Centered.
+	register_sidebar(
+		array_merge(
+			$shared_args,
+			array(
+				'name'        => __( 'Footer Center', 'mopickle' ),
+				'id'          => 'sidebar-center',
+				'description' => __( 'Widgets in this area will be displayed in the center column in the footer. <strong>Only if no widgets exist in sidebars 1 & 2.</strong>', 'mopickle' ),
+			)
+		)
+	);
+
+	// Footer Sub-footer.
+	register_sidebar(
+		array_merge(
+			$shared_args,
+			array(
+				'name'        => __( 'Sub-Footer', 'mopickle' ),
+				'id'          => 'sidebar-subfoot',
+				'description' => __( 'Widgets in this area will be displayed in the bottom section of the footer.', 'mopickle' ),
+			)
+		)
+	);
+
+}
+add_action( 'widgets_init', 'mopickle_sidebar_registration' );
+
 /* Disable 'full screen' editing as the default */
 if ( is_admin() ) {
 	function amm_disable_editor_fullscreen_as_default() {

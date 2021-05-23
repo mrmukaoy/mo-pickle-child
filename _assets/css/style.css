@@ -69,7 +69,7 @@ Author: Afflecto Media Marketing
   src: url("/wp-content/themes/mo-pickle-child/_assets/fonts/Poppins-ExtraLight.ttf") format("truetype"); }
 
 @font-face {
-  font-family: 'Display';
+  font-family: 'Collegeb';
   font-style: normal;
   font-weight: 400;
   src: url("/wp-content/themes/mo-pickle-child/_assets/fonts/Collegeb.ttf") format("truetype"); }
@@ -143,7 +143,16 @@ body:not(.overlay-header) .primary-menu > li > .icon,
   .entry-content hr:after {
     content: none; }
 
-h1, h2, h3, .banner-notice, .primary-menu .menu-item, h6,
+.entry-content > .wp-block-group.alignwide.has-background,
+.entry-content > .wp-block-group.alignfull.has-background {
+  padding-top: 4rem;
+  padding-bottom: 4rem; }
+
+.entry-content .is-narrow {
+  max-width: 36rem !important; }
+
+h1, h2, h3, .banner-notice,
+.banner-notice.has-background, .primary-menu .menu-item, h6,
 .entry-content h1,
 .entry-content h2,
 .entry-content h3,
@@ -157,28 +166,34 @@ h1, h2, h3, .banner-notice, .primary-menu .menu-item, h6,
   letter-spacing: 5px;
   text-align: center; }
 
-h1 {
+h1, .entry-content h1 {
   font-size: 50.512px;
   font-size: 3.157rem; }
 
-h2 {
+h2, .entry-content h2 {
   font-size: 37.904px;
   font-size: 2.369rem;
-  margin: 4rem 0 2rem; }
+  margin-top: 4rem;
+  margin-bottom: 1rem; }
 
-h3, .banner-notice, .primary-menu .menu-item {
+h3, .banner-notice,
+.banner-notice.has-background, .primary-menu .menu-item,
+.entry-content h3,
+.entry-content .banner-notice,
+.entry-content .primary-menu .menu-item,
+.primary-menu .entry-content .menu-item {
   font-size: 28.432px;
   font-size: 1.777rem; }
 
-h4 {
+h4, .entry-content h4 {
   font-size: 21.28px;
   font-size: 1.33rem; }
 
-h5 {
+h5, .entry-content h5 {
   font-size: 16px;
   font-size: 1rem; }
 
-h6 {
+h6, .entry-content h6 {
   font-size: 16px;
   font-size: 1rem; }
 
@@ -188,9 +203,14 @@ p, li, dd, dt {
   line-height: 1.35; }
 
 .display {
-  font-family: Display, "American Typewriter", "Times New Roman", Courier, serif;
+  font-family: "Collegeb", "American Typewriter", "Times New Roman", Courier, serif !important;
   font-weight: normal;
   margin: 0 0 0.75rem; }
+
+.uppercase {
+  text-transform: uppercase;
+  font-family: "Poppins Black", "Helvetica Black", "Open Sans", Arial Black, sans-serif !important;
+  letter-spacing: 3px; }
 
 /* Styles for elements between the header & the footer */
 .entry-content {
@@ -200,8 +220,15 @@ p, li, dd, dt {
   .entry-content strong, .entry-content b {
     font-family: "Poppins", "Helvetica Neue", "Open Sans", Arial, sans-serif;
     font-weight: bold; }
+  .entry-content .wp-block-columns h3, .entry-content .wp-block-columns .banner-notice, .entry-content .wp-block-columns .primary-menu .menu-item, .primary-menu .entry-content .wp-block-columns .menu-item {
+    margin-top: 2rem;
+    margin-bottom: 1rem; }
+  .entry-content .wp-block-columns h6 {
+    margin-top: 2rem;
+    margin-bottom: 0; }
 
-.banner-notice {
+.banner-notice,
+.banner-notice.has-background {
   margin: 0;
   width: 100% !important;
   max-width: 100% !important;
@@ -260,6 +287,26 @@ p, li, dd, dt {
 .singular .post-inner {
   padding-top: 0; }
 
+@media screen and (min-width: 700px) {
+  .wp-block-group.has-background {
+    padding: 2rem; } }
+
+.wp-block-group .wp-block-columns:not(.alignwide):not(.alignfull) {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.wp-block-image:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.aligncenter),
+figure.aligncenter {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.gb-button {
+  background-color: #d0f102;
+  color: #007a4b;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: "Poppins Black", "Helvetica Black", "Open Sans", Arial Black, sans-serif; }
+
 /* Styles for elements in the header */
 .header-footer-group .section-inner {
   width: 100%; }
@@ -296,6 +343,41 @@ p, li, dd, dt {
   display: none; }
 
 /* Styles for elements in the footer */
+.post-meta-edit-link-wrapper {
+  display: none !important; }
+
+.footer-widgets-outer-wrapper.center {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 36rem;
+  padding: 2rem;
+  border-bottom: none; }
+  .footer-widgets-outer-wrapper.center .footer-widgets-wrapper {
+    margin: 0 auto;
+    width: 100%; }
+    .footer-widgets-outer-wrapper.center .footer-widgets-wrapper .footer-widgets {
+      margin: 0 auto; }
+    .footer-widgets-outer-wrapper.center .footer-widgets-wrapper img {
+      margin: 0 auto; }
+
 #site-footer {
   background-color: #112a49;
-  color: #ffffff; }
+  color: #ffffff;
+  font-family: "Poppins Light", "Helvetica Neue", "Open Sans", Arial, sans-serif;
+  margin: 0; }
+  .footer-top-hidden #site-footer {
+    margin: 0 !important; }
+  #site-footer .section-inner {
+    display: block; }
+
+.subfooter-widgets-wrapper .footer-widgets {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 36rem;
+  text-align: center; }
+  .subfooter-widgets-wrapper .footer-widgets .uppercase {
+    letter-spacing: 3px; }
+  .subfooter-widgets-wrapper .footer-widgets .widget {
+    margin-top: 0 !important; }
+    .subfooter-widgets-wrapper .footer-widgets .widget img {
+      margin: 0 auto; }

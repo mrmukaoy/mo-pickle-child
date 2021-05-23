@@ -1,5 +1,63 @@
 /* Styles for elements in the footer */
+
+.post-meta-edit-link-wrapper {
+	display: none !important;
+}
+
+.footer-widgets-outer-wrapper.center {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 36rem;
+	padding: 2rem;
+	border-bottom: none;
+
+	.footer-widgets-wrapper {
+		margin: 0 auto;
+		width: 100%;
+
+		.footer-widgets {
+			margin: 0 auto;
+		}
+
+		img {
+			margin: 0 auto;
+		}
+	}
+}
+
 #site-footer {
 	background-color: $blue-dark;
 	color: #ffffff;
+	font-family: $body-font;
+	margin: 0;
+
+	.footer-top-hidden & {
+		margin: 0 !important;
+	}
+
+	.section-inner {
+		display: block;
+	}
+}
+
+.subfooter-widgets-wrapper {
+
+	.footer-widgets {
+		margin: 0 auto;
+		width: 100%;
+		max-width: 36rem;
+		text-align: center;
+
+		.uppercase {
+			letter-spacing: 3px;
+		}
+
+		.widget {
+			margin-top: 0 !important;
+
+			img {
+				margin: 0 auto;
+			}
+		}
+	}
 }

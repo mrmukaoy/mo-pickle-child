@@ -31,7 +31,7 @@
 	src: url('/wp-content/themes/mo-pickle-child/_assets/fonts/Poppins-ExtraLight.ttf') format('truetype');
 }
 @font-face {
-	font-family: 'Display';
+	font-family: 'Collegeb';
 	font-style: normal;
 	font-weight: 400;
 	src: url('/wp-content/themes/mo-pickle-child/_assets/fonts/Collegeb.ttf') format('truetype');
@@ -92,6 +92,16 @@ body:not(.overlay-header) .primary-menu > li > .icon,
 			content: none;
 		}
 	}
+
+	&> .wp-block-group.alignwide.has-background,
+	&> .wp-block-group.alignfull.has-background {
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+	}
+
+	.is-narrow {
+		max-width: 36rem !important;
+	}
 }
 
 h1, h2, h3, h6,
@@ -105,17 +115,16 @@ h1, h2, h3, h6,
 	letter-spacing: 5px;
 	text-align: center;
 }
-h1 { @include font-size($size-4); }
-h2 {
+h1, .entry-content h1 { @include font-size($size-4); }
+h2, .entry-content h2 {
 	@include font-size($size-3);
-	margin: 4rem 0 2rem;
+	margin-top: 4rem;
+	margin-bottom: 1rem;
 }
-h3 { @include font-size($size-2); }
-h4 { @include font-size($size-1); }
-h5 { @include font-size($size-0); }
-h6 {
-	@include font-size($size-0);
-}
+h3, .entry-content h3 { @include font-size($size-2); }
+h4, .entry-content h4 { @include font-size($size-1); }
+h5, .entry-content h5 { @include font-size($size-0); }
+h6, .entry-content h6 { @include font-size($size-0); }
 
 p, li, dd, dt {
 	@include font-size($size-0);
@@ -123,7 +132,12 @@ p, li, dd, dt {
 }
 
 .display {
-	font-family: $display;
+	font-family: $display !important;
 	font-weight: normal;
 	margin: 0 0 0.75rem;
+}
+.uppercase {
+	text-transform: uppercase;
+	font-family: $heading !important;
+	letter-spacing: 3px;
 }

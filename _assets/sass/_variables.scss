@@ -34,6 +34,7 @@ $black:       #010101;
 $gray-light:  #f4f6f5;
 
 $color-text: $black;
+$color-link: darken($orange, 13); // darker than base orange due to a11y contrast
 $blue-dark:  darken(desaturate(adjust-hue($blue, -10), 9.41), 10.00); // #112a49
 $blue-light: lighten(saturate(adjust-hue($blue, -16), 28.37), 18.63); // #0181ec
 

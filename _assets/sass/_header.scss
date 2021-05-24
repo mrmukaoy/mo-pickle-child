@@ -16,21 +16,44 @@
 			@media screen and (min-width:1000px) {
 				// vertically fill entire flex area
 				align-items: stretch;
+
+				// TEMPORARY FOR ONE-PAGE SITE
+				display: none;
+
 			}
 		}
 	}
 }
 
-.header-titles {
-}
-
-.site-logo {
+.header-titles-wrapper {
 
 	@media screen and (min-width:1000px) {
-		padding: 1.5rem 0 1.5rem 1.5rem;
+		margin-right: 2rem;
 	}
 
-	img {
-		max-height: 1.5rem;
+	.header-titles {
+
+		@media screen and (min-width:1000px) {
+			margin: 0;
+		}
+
+		.site-logo {
+			margin: 0;
+			padding: .75rem 0 .75rem .75rem;
+
+			@media screen and (min-width:1000px) {
+				padding: 1.5rem 0 1.5rem 1.5rem;
+			}
+
+			img {
+				max-height: 1.5rem;
+				width: 100%;
+				max-width: 400px;
+
+				@media screen and (min-width:1000px) and (max-width:1199px) {
+					max-width: 350px;
+				}
+			}
+		}
 	}
 }

@@ -118,7 +118,8 @@ body {
   background-color: #ffffff;
   font-family: "Poppins Light", "Helvetica Neue", "Open Sans", Arial, sans-serif;
   font-size: 1.25rem;
-  line-height: 1.35; }
+  line-height: 1.35;
+  letter-spacing: 0; }
 
 body:not(.overlay-header) .primary-menu > li > a,
 body:not(.overlay-header) .primary-menu > li > .icon,
@@ -152,13 +153,13 @@ body:not(.overlay-header) .primary-menu > li > .icon,
   max-width: 36rem !important; }
 
 h1, h2, h3, .banner-notice,
-.banner-notice.has-background, .primary-menu .menu-item, h6,
+.banner-notice.has-background, ul.primary-menu .menu-item, h6,
 .entry-content h1,
 .entry-content h2,
 .entry-content h3,
 .entry-content .banner-notice,
-.entry-content .primary-menu .menu-item,
-.primary-menu .entry-content .menu-item,
+.entry-content ul.primary-menu .menu-item,
+ul.primary-menu .entry-content .menu-item,
 .entry-content h6 {
   text-transform: uppercase;
   font-family: "Poppins Black", "Helvetica Black", "Open Sans", Arial Black, sans-serif;
@@ -177,11 +178,11 @@ h2, .entry-content h2 {
   margin-bottom: 1rem; }
 
 h3, .banner-notice,
-.banner-notice.has-background, .primary-menu .menu-item,
+.banner-notice.has-background, ul.primary-menu .menu-item,
 .entry-content h3,
 .entry-content .banner-notice,
-.entry-content .primary-menu .menu-item,
-.primary-menu .entry-content .menu-item {
+.entry-content ul.primary-menu .menu-item,
+ul.primary-menu .entry-content .menu-item {
   font-size: 28.432px;
   font-size: 1.777rem; }
 
@@ -220,7 +221,7 @@ p, li, dd, dt {
   .entry-content strong, .entry-content b {
     font-family: "Poppins", "Helvetica Neue", "Open Sans", Arial, sans-serif;
     font-weight: bold; }
-  .entry-content .wp-block-columns h3, .entry-content .wp-block-columns .banner-notice, .entry-content .wp-block-columns .primary-menu .menu-item, .primary-menu .entry-content .wp-block-columns .menu-item {
+  .entry-content .wp-block-columns h3, .entry-content .wp-block-columns .banner-notice, .entry-content .wp-block-columns ul.primary-menu .menu-item, ul.primary-menu .entry-content .wp-block-columns .menu-item {
     margin-top: 2rem;
     margin-bottom: 1rem; }
   .entry-content .wp-block-columns h6 {
@@ -318,22 +319,57 @@ figure.aligncenter {
       align-items: stretch; } }
   @media screen and (min-width: 1000px) {
     .header-footer-group .header-inner .header-navigation-wrapper {
-      align-items: stretch; } }
+      align-items: stretch;
+      display: none; } }
 
 @media screen and (min-width: 1000px) {
-  .site-logo {
-    padding: 1.5rem 0 1.5rem 1.5rem; } }
+  .header-titles-wrapper {
+    margin-right: 2rem; } }
 
-.site-logo img {
-  max-height: 1.5rem; }
+@media screen and (min-width: 1000px) {
+  .header-titles-wrapper .header-titles {
+    margin: 0; } }
+
+.header-titles-wrapper .header-titles .site-logo {
+  margin: 0;
+  padding: .75rem 0 .75rem .75rem; }
+  @media screen and (min-width: 1000px) {
+    .header-titles-wrapper .header-titles .site-logo {
+      padding: 1.5rem 0 1.5rem 1.5rem; } }
+  .header-titles-wrapper .header-titles .site-logo img {
+    max-height: 1.5rem;
+    width: 100%;
+    max-width: 400px; }
+    @media screen and (min-width: 1000px) and (max-width: 1199px) {
+      .header-titles-wrapper .header-titles .site-logo img {
+        max-width: 350px; } }
 
 /* Styles for elements in navigation */
-/* Main Nav */
-.primary-menu .menu-item {
-  font-size: 12px;
-  font-size: 0.75rem; }
-  .primary-menu .menu-item.cta {
-    background-color: #d0f102; }
+/* Main Nav - Desktop */
+ul.primary-menu {
+  margin: 0; }
+  ul.primary-menu > li {
+    margin: 0 0 0 .75rem; }
+    ul.primary-menu > li:first-child {
+      margin: 0; }
+  ul.primary-menu .menu-item {
+    font-size: 12px;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    display: table;
+    height: 100%;
+    margin: 0 0 0 .75rem; }
+    ul.primary-menu .menu-item.cta {
+      background-color: #d0f102; }
+  ul.primary-menu a {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 .25rem; }
+    ul.primary-menu a:hover, ul.primary-menu a:focus {
+      text-decoration: none; }
+  ul.primary-menu .cta a {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem; }
 
 @media screen and (min-width: 1000px) {
   .primary-menu-wrapper {
@@ -341,6 +377,39 @@ figure.aligncenter {
 
 .primary-menu-wrapper + .header-toggles {
   display: none; }
+
+/* Main Nav - Mobile */
+.header-titles-wrapper .nav-toggle .toggle-inner {
+  height: 100%;
+  padding-top: 0;
+  display: none; }
+
+.menu-modal .menu-top {
+  font-family: "Poppins", "Helvetica Neue", "Open Sans", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase; }
+
+.menu-modal .toggle {
+  color: #010101;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 0; }
+  .menu-modal .toggle:hover, .menu-modal .toggle:focus {
+    text-decoration: underline;
+    background-color: #f4f6f5; }
+
+.modal-menu > li > a,
+.modal-menu > li > .ancestor-wrapper > a {
+  font-size: 1rem;
+  padding: .75rem 1rem; }
+  .modal-menu > li > a:hover, .modal-menu > li > a:focus,
+  .modal-menu > li > .ancestor-wrapper > a:hover,
+  .modal-menu > li > .ancestor-wrapper > a:focus {
+    text-decoration: underline;
+    background-color: #f4f6f5; }
 
 /* Styles for elements in the footer */
 .post-meta-edit-link-wrapper {
